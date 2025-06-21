@@ -45,7 +45,7 @@ Copy to clipboard
 
 💡 Installation
 
-git clone https://github.com/YOUR_USERNAME/payloadgen.git
+git clone https://github.com/engalisaleh95/payloadgen.git
 cd payloadgen
 pip install -r requirements.txt
 
@@ -53,25 +53,6 @@ requirements.txt:
 pyperclip
 requests
 
-📃 Folder Structure
-
-payloadgen/
-├── payloadgen.py             # CLI Interface
-├── gui.py                    # GUI Interface (Tkinter)
-├── modules/
-│   ├── xss_generator.py
-│   ├── sqli_generator.py
-│   ├── cmd_generator.py
-│   └── encoder.py
-├── utils/
-│   ├── helpers.py
-│   ├── sender.py             # Burp-style HTTP testing
-│   └── waf_filter.py         # Simulated WAF testing
-├── payloads/
-│   └── sample_payloads.json
-├── demo/                     # Screenshots or demo video
-├── requirements.txt
-└── README.md
 
 🔧 How to Use
 
@@ -91,6 +72,7 @@ Simulate WAF Blocking
 python3 payloadgen.py --xss --waf-test
 
 Send Payloads to Target URL (Simulates Burp Repeater)
+
 python3 payloadgen.py --sqli --send http://target.com/test --param input
 
 🖼️ GUI Mode (Tkinter)
@@ -100,8 +82,13 @@ Launch the GUI:
 python3 gui.py
 
 Features:
+
 Select payload type: XSS, SQLi, CMD
+
 Choose encoding: None, Base64, URL, Hex, Unicode
+
 Enable obfuscation
+
 Copy to clipboard
+
 Simulated WAF test built-in
