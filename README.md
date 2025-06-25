@@ -1,114 +1,141 @@
-PayloadGen: Custom Payload Generator for Web Exploitation
+PayloadGen
 
-PayloadGen is a modular Python-based tool that automates the generation of web exploitation payloads for:
+Custom Payload Generator for Web Exploitation
 
-XSS (Reflected, Stored, DOM-Based)
+PayloadGen is a modular Python-based tool designed to automate the generation of evasion-ready payloads for XSS, SQL Injection, and Command Injection attacks. 
 
-SQL Injection (Error-Based, Union-Based, Blind)
-
-Command Injection (Linux & Windows)
-
-The tool provides evasion-ready output, supports encoding, obfuscation, simulated WAF testing, and even includes a GUI interface and Burp-style HTTP payload testing.
-
+It supports advanced encoding, obfuscation, and simulated WAF testing, making it ideal for penetration testers and security researchers.
+________________________________________
 ✨ Features
 
-🔧 Core Modules
+🔧 Core Payload Modules
 
-XSS Payloads:
+•	XSS Payloads
 
-Reflected, Stored, and DOM-Based
+o	Reflected, Stored, and DOM-Based XSS.
 
-Bypass techniques using <svg>, srcdoc, malformed tags, null bytes
+o	Bypass techniques: <svg>, srcdoc, null bytes, malformed tags.
 
-SQLi Payloads:
+•	SQL Injection Payloads
 
-Error-based, Union-based, Blind SQLi
+o	Error-based, Union-based, and Blind SQLi.
 
-WAF evasion: comments, case tricks, encoded characters
+o	WAF evasion: inline comments, case mixing, encoded characters.
 
-Command Injection:
+•	Command Injection
 
-Linux: ; ls, && whoami, | uname
+o	Linux: ; ls, && whoami, | uname.
 
-Windows: | net user, && dir, PowerShell-based injections
+o	Windows: | net user, && dir, PowerShell-based payloads.
 
 🌐 Encoding & Obfuscation
 
-Supports Base64, URL, Hex, and Unicode encodings
+•	Supports Base64, URL, Hex, and Unicode encoding.
 
-Obfuscation via inline comments, spacing tricks, casing
-
+•	Advanced obfuscation via random comments, spacing tricks, and case variation.
 ⚙️ Output Options
 
-Print to CLI
+•	Print to CLI (--output=cli).
 
-Export to JSON
+•	Export to JSON (--output=json).
 
-Copy to clipboard
+•	Copy to clipboard (--output=clipboard).
 
 📊 Bonus Features
 
-✅ GUI using Tkinter (select module, encoding, generate payloads visually)
+•	GUI Mode: Built with Tkinter for visual payload generation.
 
-✅ Burp-style Repeater: Send payloads directly to a live URL with custom query param
+•	Burp-Style Repeater: Send payloads directly to a target URL with custom query parameters.
 
-✅ Simulated WAF Testing: Test which payloads are blocked by common WAF patterns
-
+•	WAF Simulation: Test payloads against common WAF patterns.
+________________________________________
 💡 Installation
+1.	Clone the repository:
 
 git clone https://github.com/engalisaleh95/payloadgen.git
 
 cd payloadgen
 
+2.	Install dependencies:
+
 pip install -r requirements.txt
 
-requirements.txt:
+Requirements:
 
-pyperclip
+•	Python 3.6+
 
-requests
+•	Libraries: pyperclip, requests
+________________________________________
+🔧 Usage
 
+Command-Line Examples
 
-🔧 How to Use
-
-Generate Encoded XSS Payloads
+Generate URL-encoded XSS payloads	
 
 python3 payloadgen.py --xss --encode=url
 
-Obfuscate SQLi and Export to JSON
+Obfuscate SQLi and export to JSON	
 
 python3 payloadgen.py --sqli --obfuscate --output=json
 
-Copy CMD Injection Payloads to Clipboard
+Copy CMD Injection payloads to clipboard	
 
 python3 payloadgen.py --cmd --output=clipboard
 
-Combine All
-
-python3 payloadgen.py --xss --sqli --cmd --encode=base64 --output=cli
-
-Simulate WAF Blocking
+Simulate WAF blocking	
 
 python3 payloadgen.py --xss --waf-test
 
-Send Payloads to Target URL (Simulates Burp Repeater)
+Send payloads to a target URL (Burp-style)	
 
 python3 payloadgen.py --sqli --send http://target.com/test --param input
 
-🖼️ GUI Mode (Tkinter)
+🖼️ GUI Mode
 
-Launch the GUI:
+Launch the interactive GUI:
 
 python3 gui.py
 
+
 Features:
 
-Select payload type: XSS, SQLi, CMD
+•	Dropdown menus for payload type (XSS/SQLi/CMD).
 
-Choose encoding: None, Base64, URL, Hex, Unicode
+•	Encoding options (Base64/URL/Hex/Unicode).
 
-Enable obfuscation
+•	One-click copy to clipboard.
+________________________________________
+📂 Project Structure
 
-Copy to clipboard
+plaintext
 
-Simulated WAF test built-in
+
+payloadgen/  
+
+├── payloadgen.py    # Main CLI tool  
+
+├── gui.py           # Tkinter GUI  
+
+├── wordlists/       # Custom payload dictionaries  
+
+├── requirements.txt # Dependencies  
+
+└── README.md  
+________________________________________
+🤝 Contributing
+
+Pull requests and bug reports are welcome! For major changes, open an issue first.
+________________________________________
+📜 License
+
+This project is licensed under MIT.
+________________________________________
+📌 Resources
+
+•	Documentation: GitHub Wiki
+
+•	Report Issues: GitHub Issues
+________________________________________
+🚀 About
+
+Developed by Eng Ali Saleh as part of offensive security research.
