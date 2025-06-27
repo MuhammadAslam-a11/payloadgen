@@ -52,8 +52,7 @@ ________________________________________
 💡 Installation
 1.	Clone the repository:
 
-git clone https://github.com/engalisaleh95/payloadgen.git
-
+git clone https://github.com/MuhammadAslam-a11/payloadgen.git
 cd payloadgen
 
 2.	Install dependencies:
@@ -138,4 +137,4 @@ ________________________________________
 ________________________________________
 🚀 About
 
-Developed by Eng Ali Saleh as part of offensive security research.
+Developed by Muhammad Aslam as part of offensive security research.
